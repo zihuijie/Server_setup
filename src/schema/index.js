@@ -11,7 +11,13 @@ type Link {
 type Query {
   allLinks: [Link!]!
 }
+
+type Mutation {
+  createLink(url: String!, description: String!): Link
+}
 `;
+
+
 
 export default makeExecutableSchema({ typeDefs,
 resolvers });
